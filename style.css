@@ -5,17 +5,18 @@
 
 .heada {
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
     url("images/bg2.jpg") bottom no-repeat;
   background-size: cover;
 }
 .container {
   background-color: blueviolet;
-  /* height: 55vh; */
+  height: 70vh;
+  display: flex;
 }
 .foot {
-  /* height: 15vh; */
+  height: 10vh;
   background-color: rgb(22, 22, 68);
   text-align: center;
 }
@@ -33,4 +34,62 @@ a {
 }
 li:hover {
   background-color: rgb(43, 158, 143);
+}
+
+.create-card {
+  flex-grow: 1;
+}
+
+legend {
+  padding: 5px;
+  font-size: 3em;
+  text-align: center;
+  color: white;
+}
+fieldset {
+  padding: 10px;
+  margin: 5px;
+  width: 90%;
+  height: 90%;
+}
+form {
+  height: 100%;
+}
+
+.display {
+  flex-grow: 3;
+}
+.display-fash-card {
+  width: 80%;
+  border: solid 1px white;
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+label,
+textarea,
+.click-btn {
+  display: block;
+  width: 100%;
+}
+textarea {
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+label {
+  text-align: center;
+}
+#question {
+  height: 20%;
+}
+#answer {
+  height: 50%;
+}
+.click-btn {
+  height: 10%;
+  margin-top: 5px;
 }
