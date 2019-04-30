@@ -52,7 +52,7 @@ fieldset {
   width: 90%;
   height: 90%;
 }
-form {
+#card-form {
   height: 100%;
 }
 
@@ -69,6 +69,17 @@ form {
   top: 50%;
   transform: translateY(-50%);
 }
+.flash-card-question {
+  font-size: 2em;
+}
+.flash-card-answer {
+  font-size: 1.5em;
+}
+.flash-card-id {
+  background-color: brown;
+  font-size: 0.8em;
+}
+
 label,
 textarea,
 .click-btn {
@@ -92,4 +103,24 @@ label {
 .click-btn {
   height: 10%;
   margin-top: 5px;
+}
+.display-fash-card button {
+  width: 10%;
+}
+
+.alert {
+  padding: 0.1em;
+  font-size: 3em;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.alert-danger {
+  background-color: red;
+}
+.alert-success {
+  background-color: green;
+}
+.alert-removed {
+  background-color: yellow;
 }
