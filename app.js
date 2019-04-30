@@ -70,13 +70,10 @@ class UI {
     // Delete an article
     if (label.classList.contains("delete")) {
       label.parentElement.parentElement.remove();
-      console.log(this);
       this.showAlert("Card removed", "removed");
     }
   }
   static showAlert(message, className) {
-    //<body><header><div>hi whatup</div></header><header><main></body>
-    // const div = document.createElement("div");
     const div = document.createElement("div");
 
     div.className = `alert alert-${className}`;
@@ -112,7 +109,7 @@ form.addEventListener("submit", event => {
     UI.clearfield();
   } else {
     const card = new Card(question, answer); // Create a card:  (instantiate)
-    console.log(card); //deburging
+
     UI.addCardToList(card); // Add card .--> to ui
     Store.addCard(card); // Add card .--> to local storage
     UI.clearfield(); // Clears input fields
@@ -124,10 +121,6 @@ form.addEventListener("submit", event => {
 const cardsDisplay = document.querySelector(".display"); //select the display part of UI
 cardsDisplay.addEventListener("click", event => {
   UI.deleteCard(event.target); // Removed from display UI
-  console.log(
-    "this is the id",
-    event.target.parentElement.previousElementSibling.textContent
-  );
   Store.removeCard(
     Number.parseInt(
       event.target.parentElement.previousElementSibling.textContent
